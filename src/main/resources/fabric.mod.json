@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "elytra-variometer",
+	"version": "${version}",
+	"name": "Elytra Variometer",
+	"description": "This is a mod that adds an in-game variometer when flying with elytras.",
+	"authors": [
+		"Léo-21"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/elytra-variometer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.leo21.elytra_variometer.ElytraVariometer"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
