@@ -40,6 +40,7 @@ public class ElytraVariometer implements ModInitializer {
 
 			if (player == null) return;
 			if (!player.isFallFlying()) return;
+			if (player.isSubmergedInWater()) return;
 
 			float verticalSpeed = (float) player.getVelocity().getY();
 
