@@ -3,10 +3,10 @@ package me.leo21.elytra_variometer;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,8 +35,8 @@ public class ElytraVariometer implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Initializing Elytra Variometer");
 
-		ClientTickEvents.START_CLIENT_TICK.register(client -> {
-			ClientPlayerEntity player = client.player;
+		ClientTickEvents.START_WORLD_TICK.register(world -> {
+			ClientPlayerEntity player = MinecraftClient.getInstance().player;
 
 			if (player == null) return;
 			if (!player.isFallFlying()) return;
